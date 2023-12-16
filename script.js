@@ -8,3 +8,9 @@ function side_menu_toggle() {
 
 side_menu_toggle_lesson_button.addEventListener('click', side_menu_toggle);
 side_menu_toggle_close_icon.addEventListener('click', side_menu_toggle); //blok kodu służący do otwierania i zamykania menu bocznego
+
+function togglesound(audioFile) {
+    const audio = new Audio(audioFile);
+
+    audio.play();
+}

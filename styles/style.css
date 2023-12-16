@@ -4,7 +4,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     color: black;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -17,17 +17,21 @@ a {
 header {
     width: calc(100% - (2*15%));
     height: 7vh;
-    position: fixed;
+    padding: 10px 16.5%;
+    margin-bottom: 1%;
+    box-shadow: 0px 0px 10px rgb(130, 130, 130);
+    background-color: white;
+    z-index: 10;
+    position: sticky;
     top: 0;
-    padding: 20px 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
-    font-size: 4.5vh;
-    font-weight: 500;
+.logo img {
+    width: 80px;
+    height: 80px;
 }
 
 .logo a {
@@ -85,8 +89,9 @@ header {
     z-index: 10;
     border-top: 2px solid #f42e2e;
     box-shadow: 0px 0px 10px rgb(130, 130, 130);
-    transform: translateX(100%);
+    transform: translateX(110%);
     transition: transform 0.6s ease-in-out;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
