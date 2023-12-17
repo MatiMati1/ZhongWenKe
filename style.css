@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background: salmon;
+    background-image: url(images/tlo3.jpg);
 }
 .app{
     background: lightgoldenrodyellow;
