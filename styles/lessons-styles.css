@@ -64,5 +64,5 @@ td {
     border-collapse: collapse;
 }
 body {
-    background-image: url(images/tlo3.jpg);
+    background-image: irl(images/tlo3.jpg);
 }
