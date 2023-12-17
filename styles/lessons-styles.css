@@ -63,3 +63,6 @@ td {
     border: 1px solid;
     border-collapse: collapse;
 }
+body {
+    background-image: src(images/tlo3.jpg);
+}
