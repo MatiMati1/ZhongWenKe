@@ -87,10 +87,13 @@ function selectAnswer(e){
 }
 
 function showScore(){
-    resetState();
+   resetState();
     questionElement.innerHTML = `Uzyskano ${score} punktów z możliwych ${questions.length}!`;
-    nextButton.innerHTML = "Zagraj ponownie";
+    nextButton.innerHTML = "Zakończ quiz";
     nextButton.style.display = "block";
+    nextButton.onclick = function() {
+        history.back();
+    };
 }
 
 function handleNextButton(){
