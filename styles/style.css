@@ -7,6 +7,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 a {
@@ -16,7 +17,7 @@ a {
 
 header {
     width: calc(100% - (2*15%));
-    height: 7vh;
+    height: clamp(50px, 7vh, 100px);
     padding: 10px 16.5%;
     margin-bottom: 1%;
     box-shadow: 0px 0px 10px rgb(130, 130, 130);
@@ -30,8 +31,8 @@ header {
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: clamp(55px, 4vw, 80px);
+    height: clamp(55px, 4vw, 80px);
 }
 
 .logo a {
@@ -44,7 +45,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 2vh;
+    font-size: clamp(18px, 2.3vh, 40px);
     font-weight: 400;
 }
 
@@ -60,7 +61,7 @@ header {
 
 .header-menu-item a,
 .special-button a {
-    padding: 10px 15px;
+    padding: 10px 20px;
 }
 
 .header-menu-item a:hover {
@@ -71,7 +72,7 @@ header {
     background-color: #f42e2e;
     color: white;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 2vh;
+    border-radius: clamp(15px, 1.8vh, 25px);
 }
 
 .special-button:hover {
@@ -82,7 +83,7 @@ header {
     color: black;
     background-color: white;
     list-style-type: none;
-    width: 35vw;
+    width: max(570px, 35vw);
     height: 100vh;
     padding: 15px 15px;
     font-size: 1vw;
@@ -92,14 +93,20 @@ header {
     transform: translateX(110%);
     transition: transform 0.6s ease-in-out;
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "close chapter1 chapter2 chapter3 ."
+        ". chapter4 chapter5 chapter6 .";
     align-items: center;
+    justify-content: center;
     align-self: flex-end;
 }
 
 .side-menu-active {
     transform: translateX(0);
+    position: fixed;
 }
 
 .side-menu-close-icon {
@@ -108,39 +115,145 @@ header {
     align-self: flex-start;
     justify-self: flex-start;
     cursor: pointer;
+    grid-area: close;
 }
 
-.lessons-list-wrapper {
-    margin: 3.5vh 0;
+.lesson-menu-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.chapter-header {
+    height: clamp(35px, 1.2vw, 100px);
+    font-size: clamp(25px, 1.2vw, 100px);
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    background-color: #f42e2e;
+    color: white;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.chapter-header:hover {
+    color: white;
 }
 
 .side-menu-lessons-list {
     padding: 0;
     margin: 1vh 1vw;
+    font-size: clamp(20px, 1.1vw, 10px);
     list-style-type: none;
     text-align: center;
 }
 
 .side-menu-lessons-list li {
-    padding: 10px 10px;
+    padding: 15px 10px;
 }
 
 .side-menu-lessons-list li:hover {
     color: #f42e2e;
 }
 
-.side-menu-lessons-list li:first-child {
-    font-size: 1.1vw;
-    margin-bottom: 5px;
-    background-color: #f42e2e;
-    color: white;
-    border-radius: 22px;
+.mobile-lesson-menu {
+    display: none;
 }
 
-.side-menu-lessons-list li:first-child:hover {
-    color: white;
+@media (max-width: 660px) {
+
+    body {
+        background-image: none;
+        background-color: white;
+    }
+
+    .header-menu-item {
+        display: none;
+    }
+
+    .chapter-header {
+        border-radius: 33px;
+        padding: 10px 70px;
+        margin: 0;
+    }
+
+    .chapter-header:hover {
+        background-color: #d63e3e;
+        cursor: pointer;
+    }
+
+    .side-menu {
+        width: 100vw;
+        padding: 15px 15px;
+        font-size: 1vw;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px;
+        grid-template-areas:
+            "close chapter1 ."
+            ". chapter2 ."
+            ". chapter3 ."
+            ". chapter4 ."
+            ". chapter5 ."
+            ". chapter6 .";
+        align-items: center;
+        justify-content: center;
+    }
+
+    .side-menu-active {
+        left: 0;
+        position: absolute;
+    }
+
+    .side-menu-toggle {
+        width: 100px;
+    }
+
+    .side-menu-lessons-list {
+        display: none;
+    }
+
+    .mobile-lesson-menu {
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: white;
+        border-top: 2px solid #f42e2e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transform: translateX(110%);
+        transition: transform 0.6s ease-in-out;
+        position: absolute;
+        top: 0px;
+    }
+
+    .mobile-lesson-menu .chapter-header {
+        font-size: 30px;
+        padding: 10px 55px;
+        cursor: default;
+    }
+
+    .mobile-lesson-menu .chapter-header:hover {
+        background-color: #f42e2e;
+    }
+
+    .mobile-lesson-menu .side-menu-lessons-list {
+        display: block;
+        font-size: 25px;
+    }
+
+    .mobile-menu-close-icon {
+        width: 30px;
+        height: 30px;
+        margin: 15px 15px;
+        align-self: flex-start;
+        cursor: pointer;
+    }
+
+    .mobile-lesson-menu-active {
+        transform: translateX(0);
+        position: fixed;
+    }
 }

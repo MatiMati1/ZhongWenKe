@@ -75,13 +75,3 @@ td {
 .sound-double-letters img {
     left: 0px;
 }
-body.tlo2 {
-    margin: 0;
-    padding: 0;
-    background-image: url('tlo2.jpg'); 
-    background-size: cover ;
-    background-position: top;
-    background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
-    color: #000000;
-}

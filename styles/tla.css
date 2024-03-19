@@ -1,17 +1,17 @@
 .tlo1 {
-    background-image: url('images/tlo/tlo1.jpg');
+    background-image: url('../images/tlo/tlo1.jpg');
     background-size: cover ;
     background-position: top;
     background-repeat: no-repeat;
 }
 .tlo2 {
-    background-image: url('images/tlo/tlo2.jpg');
+    background-image: url('../images/tlo/tlo2.jpg');
     background-size: cover ;
     background-position: top;
     color: #000000;
 }
 .tlo3 {
-    background-image: url('images/tlo/tlo3.jpg');
+    background-image: url('../images/tlo/tlo3.jpg');
     background-size: cover ;
     background-position: top;
     background-repeat: no-repeat;
