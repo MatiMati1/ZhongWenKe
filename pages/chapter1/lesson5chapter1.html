@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kurs Chinskiego</title>
+    <link rel="icon" href="../../images/logo.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/lessons-styles.css">
+    <link rel="stylesheet" href="../../styles/tla.css">
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    
+        div#buttons {
+          font-size: 30px;
+          text-align: center;
+          width: 60px;
+          height: 50px;
+          border: 3px solid #cf3a3a;
+          margin-left: auto;
+          margin-right: auto;
+          color: rgb(0, 0, 0);
+          background-color: #e00b0b;
+          border-radius: 30%;
+          padding: 5px;
+          float:left;
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+          
+        }
+    
+        div.znaczek {
+          font-weight: bold; 
+          float:left;
+          
+          width:600px;
+          padding-bottom: 23px;
+          font-size:30px;
+          padding-left: 5px;
+          padding-top: 8px;
+          text-align:center;
+          background-color: rgb(207, 178, 47);
+          border-radius: 15px;
+          border: 3px solid rgb(177, 150, 32);
+          vertical-align:baseline;
+          
+        }
+
+        hr{
+          color: black;
+          height: 2px;
+          background-color: black;
+          border: 1px black solid;
+          width: 595px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body class="tlo3">
+    <header> <!--nagłówek-->
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../images/logo.svg">
+            </a>
+        </div>
+        <nav> <!--menu w headerze treść przykładowa-->
+            <ul class="header-menu">
+                <li class="header-menu-item">
+                    <a href="#">O Kursie</a>
+                </li>
+                <li class="special-button side-menu-toggle">
+                    <a href="#">Lekcje</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="side-menu"> <!--Początek pod menu-->
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="side-menu-close-icon">
+        <div class="lesson-menu-container" style="grid-area: chapter1;">
+            <p class="chapter-header mobile-menu-opening-1">Rozdział 1</p>
+            <ul class="side-menu-lessons-list">
+              <li><a href="lesson1chapter1.html">lekcja 1</a></li>
+              <li><a href="lesson2chapter1.html">lekcja 2</a></li>
+              <li><a href="lesson3chapter1.html">lekcja 3</a></li>
+              <li><a href="lesson4chapter1.html">lekcja 4</a></li>
+              <li><a href="lesson5chapter1.html">lekcja 5</a></li>
+            </ul>
+        </div>
+        <div class="lesson-menu-container" style="grid-area: chapter2;">
+            <p class="chapter-header mobile-menu-opening-2">Rozdział 2</p>
+            <ul class="side-menu-lessons-list">
+                <li><a href="#">lekcja 1</a></li>
+                <li><a href="#">lekcja 2</a></li>
+                <li><a href="#">lekcja 3</a></li>
+                <li><a href="#">lekcja 4</a></li>
+                <li><a href="#">lekcja 5</a></li>
+            </ul>
+        </div>
+        <div class="lesson-menu-container" style="grid-area: chapter3;">
+            <p class="chapter-header mobile-menu-opening-3">Rozdział 3</p>
+            <ul class="side-menu-lessons-list">
+                <li><a href="#">lekcja 1</a></li>
+                <li><a href="#">lekcja 2</a></li>
+                <li><a href="#">lekcja 3</a></li>
+                <li><a href="#">lekcja 4</a></li>
+                <li><a href="#">lekcja 5</a></li>
+            </ul>
+        </div>
+        <div class="lesson-menu-container" style="grid-area: chapter4;">
+            <p class="chapter-header mobile-menu-opening-4">Rozdział 4</p>
+            <ul class="side-menu-lessons-list">
+                <li><a href="#">lekcja 1</a></li>
+                <li><a href="#">lekcja 2</a></li>
+                <li><a href="#">lekcja 3</a></li>
+                <li><a href="#">lekcja 4</a></li>
+                <li><a href="#">lekcja 5</a></li>
+            </ul>
+        </div>
+        <div class="lesson-menu-container" style="grid-area: chapter5;">
+            <p class="chapter-header mobile-menu-opening-5">Rozdział 5</p>
+            <ul class="side-menu-lessons-list">
+                <li><a href="#">lekcja 1</a></li>
+                <li><a href="#">lekcja 2</a></li>
+                <li><a href="#">lekcja 3</a></li>
+                <li><a href="#">lekcja 4</a></li>
+                <li><a href="#">lekcja 5</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="lesson-menu-container" style="grid-area: chapter6;">
+            <p class="chapter-header mobile-menu-opening-6">Rozdział 6</p>
+            <ul class="side-menu-lessons-list">
+                <li><a href="#">lekcja 1</a></li>
+                <li><a href="#">lekcja 2</a></li>
+                <li><a href="#">lekcja 3</a></li>
+                <li><a href="#">lekcja 4</a></li>
+                <li><a href="#">lekcja 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Wysuwane menu dla wersji moblinej-->
+    <div class="mobile-lesson-menu mobile-menu-1">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-1">
+        <p class="chapter-header">Rozdział 1</p>
+        <ul class="side-menu-lessons-list">
+          <li><a href="lesson1chapter1.html">lekcja 1</a></li>
+          <li><a href="lesson2chapter1.html">lekcja 2</a></li>
+          <li><a href="lesson3chapter1.html">lekcja 3</a></li>
+          <li><a href="lesson4chapter1.html">lekcja 4</a></li>
+          <li><a href="lesson5chapter1.html">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="mobile-lesson-menu mobile-menu-2">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-2">
+        <p class="chapter-header">Rozdział 2</p>
+        <ul class="side-menu-lessons-list">
+            <li><a href="#">lekcja 1</a></li>
+            <li><a href="#">lekcja 2</a></li>
+            <li><a href="#">lekcja 3</a></li>
+            <li><a href="#">lekcja 4</a></li>
+            <li><a href="#">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="mobile-lesson-menu mobile-menu-3">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-3">
+        <p class="chapter-header">Rozdział 3</p>
+        <ul class="side-menu-lessons-list">
+            <li><a href="#">lekcja 1</a></li>
+            <li><a href="#">lekcja 2</a></li>
+            <li><a href="#">lekcja 3</a></li>
+            <li><a href="#">lekcja 4</a></li>
+            <li><a href="#">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="mobile-lesson-menu mobile-menu-4">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-4">
+        <p class="chapter-header">Rozdział 4</p>
+        <ul class="side-menu-lessons-list">
+            <li><a href="#">lekcja 1</a></li>
+            <li><a href="#">lekcja 2</a></li>
+            <li><a href="#">lekcja 3</a></li>
+            <li><a href="#">lekcja 4</a></li>
+            <li><a href="#">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="mobile-lesson-menu mobile-menu-5">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-5">
+        <p class="chapter-header">Rozdział 5</p>
+        <ul class="side-menu-lessons-list">
+            <li><a href="#">lekcja 1</a></li>
+            <li><a href="#">lekcja 2</a></li>
+            <li><a href="#">lekcja 3</a></li>
+            <li><a href="#">lekcja 4</a></li>
+            <li><a href="#">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="mobile-lesson-menu mobile-menu-6">
+        <img src="../../icons/close_icon.svg" alt="ikona zamkniecia" class="mobile-menu-close-icon mobile-menu-close-icon-6">
+        <p class="chapter-header">Rozdział 6</p>
+        <ul class="side-menu-lessons-list">
+            <li><a href="#">lekcja 1</a></li>
+            <li><a href="#">lekcja 2</a></li>
+            <li><a href="#">lekcja 3</a></li>
+            <li><a href="#">lekcja 4</a></li>
+            <li><a href="#">lekcja 5</a></li>
+        </ul>
+    </div>
+    <div class="forward-backward-buttons-container">
+        <div class="forward-backward-buttons">
+            <img src="../../icons/arrow_back.svg" alt="istrzałka w lewo" class="forward-backward-arrows">
+            <a href="lesson4chapter1.html">Poprzednia lekcja</a>
+        </div>
+        <div class="forward-backward-buttons">
+            <a href="lesson6chapter1.html">Następna lekcja</a>
+            <img src="../../icons/arrow_forward.svg" alt="istrzałka w prawo" class="forward-backward-arrows">
+        </div>
+    </div>
+    <article class="lesson">
+        <div class="lesson-subject">Słownictwo</div>
+        <div class="chapter-lesson-number">Rozdział 1 Lekcja 2</div>
+        <main class="main-lesson-text">
+            <div id="container">
+                <div class="znaczek">
+                <div id="buttons" onclick="playSound()">说</div>shuō-Mówić
+                <br><br>
+                <hr>
+              <div id="buttons" onclick="playSound1()">汉语</div>hàn yǔ-Chiński(Język)
+                <br><br>
+                <hr>
+              <div id="buttons" onclick="playSound2()">中文</div>zhōng wèn-Chiński(Język)
+                <br><br>
+                <hr>
+              <div id="buttons" onclick="playSound3()">看</div>kàn-Patrzeć/Czytać
+                <br><br>
+                <hr>
+              <div id="buttons" onclick="playSound4()">听</div>tīng-Słuchać
+                <br><br>
+                <hr>
+                <div id="buttons" onclick="playSound5()">学习</div>xué xí-Uczyć się
+              
+              <br><br>
+                <hr>
+                <div id="zdania">我说汉语
+                  <br><br>wǒ shuō hàn yǔ<br>
+                  Mówię po chińsku
+                </div>
+                <br><br>
+               <div id="zdania">我学习中文
+                <br><br>wǒ xué xí zhōng wèn<br>
+                Uczę się chińskiego
+               </div>
+               <br><br> <br><br>
+               <div id="zdania">我听中文<br><br>
+                  wǒ tīng zhōng wèn<br>
+              Słucham chińskiego</div>
+              </div>
+        </main>
+    </article>
+    <div class="forward-backward-buttons-container">
+        <div class="forward-backward-buttons">
+            <img src="../../icons/arrow_back.svg" alt="istrzałka w lewo" class="forward-backward-arrows">
+            <a href="lesson4chapter1.html">Poprzednia lekcja</a>
+        </div>
+        <div class="forward-backward-buttons">
+            <a href="lesson6chapter1.html">Następna lekcja</a>
+            <img src="../../icons/arrow_forward.svg" alt="istrzałka w prawo" class="forward-backward-arrows">
+        </div>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script>
+        //***************************************//
+        var shuo1 = new Audio('shuo1.mp3');
+        var isPlaying = false;
+      
+        function playSound() {
+          if (!isPlaying) {
+            isPlaying = true;
+            shuo1.currentTime = 0;
+            shuo1.play();
+            isPlaying = false;
+            
+          }
+        }
+      
+       
+      
+        //***************************************//
+      
+        var han4yu3 = new Audio('../../sounds/chapter1/lesson5/han4yu3.mp3');
+      
+      
+        function playSound1() {
+          if (!isPlaying) {
+            isPlaying = true;
+            han4yu3.currentTime = 0;
+            han4yu3.play();
+            isPlaying = false;
+            
+          }
+        }
+      
+        
+      
+      //***************************************//
+      
+        var zhong1wen4 = new Audio('../../sounds/chapter1/lesson5/zhong1wen4.mp3');
+      
+      
+        function playSound2() {
+          if (!isPlaying) {
+            isPlaying = true;
+            zhong1wen4.currentTime = 0;
+            zhong1wen4.play();
+            isPlaying = false;
+            
+          }
+        }
+      
+      
+      //***************************************//
+      
+        var kan4 = new Audio('../../sounds/chapter1/lesson5/kan4.mp3');
+      
+      
+        function playSound3() {
+          if (!isPlaying) {
+            isPlaying = true;
+            kan4.currentTime = 0;
+            kan4.play();
+            isPlaying = false;
+            
+          }
+        }
+      
+        //***************************************//
+      
+      var ting1 = new Audio('../../sounds/chapter1/lesson5/ting1.mp3');
+      
+      
+        function playSound4() {
+          if (!isPlaying) {
+            isPlaying = true;
+            ting1.currentTime = 0;
+            ting1.play();
+            isPlaying = false;
+            
+          }
+        }
+        
+        //***************************************//
+        var xue2xi2 = new Audio('../../sounds/chapter1/lesson5/xue2xi2.mp3');
+      
+      
+      function playSound5() {
+        if (!isPlaying) {
+          isPlaying = true;
+          xue2xi2.currentTime = 0;
+          xue2xi2.play();
+          isPlaying = false;
+          
+        }
+      }
+        //***************************************//
+      
+      
+       
+      
+      </script>
+</body>
+
+</html>
