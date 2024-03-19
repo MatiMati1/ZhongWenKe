@@ -166,6 +166,7 @@ header {
     body {
         background-image: none;
         background-color: white;
+        overflow-y: scroll;
     }
 
     .header-menu-item {

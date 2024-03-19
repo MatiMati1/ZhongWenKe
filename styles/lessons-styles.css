@@ -28,27 +28,27 @@
 }
 
 .lesson-subject {
-    font-size: 3.5vw;
+    font-size: max(30px, 3.5vh);
     letter-spacing: 0.25vw;
     margin: 1.5% 0;
 }
 
 .chapter-lesson-number {
-    font-size: clamp(13px, 0.8vw, 22px);
+    font-size: clamp(15px, 0.8vw, 22px);
     margin: 1.5% 0;
     color: rgb(122, 122, 122);
 }
 
 .main-lesson-text {
-    font-size: clamp(15px, 1.1vw, 30px);
-    line-height: 1.6vw;
+    font-size: clamp(18px, 1.1vw, 30px);
+    line-height: 24px;
     letter-spacing: 0.03vw;
     display: flex;
     flex-direction: column;
 }
 
 .lesson-image {
-    margin: 70px 100px;
+    margin: 30px 50px;
     justify-self: center;
 }
 
@@ -74,4 +74,14 @@ td {
 
 .sound-double-letters img {
     left: 0px;
+}
+
+@media (max-width: 660px) {
+    .forward-backward-buttons-container {
+        display: none;
+    }
+
+    .lesson {
+        margin:0px 5%;
+    }
 }
